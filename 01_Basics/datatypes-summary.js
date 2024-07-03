@@ -37,3 +37,28 @@ const myFunction = function()
 console.log(typeof bigNumber);
 console.log(typeof myFunction); // function - some documentation (function object)
 console.log(typeof heros); //Object
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(primitive) Heap(nonprimitivez)
+
+let myName = "Gayatri"
+let newName = myName
+newName = "Shivani"
+
+console.log(myName);
+console.log(newName);
+
+let userOne = {
+    email: "user@gmail.com",
+    upiId: "user@ybl"
+}
+
+let userTwo = userOne
+userOne.email = "gayatri@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
