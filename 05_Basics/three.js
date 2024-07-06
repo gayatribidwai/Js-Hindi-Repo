@@ -18,3 +18,21 @@ map.set('Fr', "France")
 map.set('IN', "India") // Duplicate not repeted
 
 console.log(map);
+
+// for (const key of map) {
+//     console.log(key);
+// }
+
+for (const [key, value] of map) {
+    console.log(key, ':-', value);
+}
+
+const myObject = {
+    'game1': 'NFS',
+    'game2': 'Spiderman',
+};
+
+// for (const [key, Value] of myObject) {
+//     console.log(key, ':-', value);
+// } // (not working) not the correct way
+
