@@ -3,7 +3,9 @@ const cityName = document.getElementById("city-name");
 const cityTime = document.getElementById("city-time");
 const cityTemp = document.getElementById("city-temp");
 const timer = document.getElementById("timer")
-
+const stopButton = document.getElementById("stop-button")
+// const userinput = document.getElementById("user-input")
+// const timeButton = document.getElementById("time-button")
 
 function showTime()
 {
@@ -12,7 +14,28 @@ function showTime()
     timer.innerText = time;
 }
 
-setInterval(showTime, 1000);
+let interval = setInterval(showTime, 1000);
+
+stopButton.addEventListener("click", () =>{
+    clearInterval(interval);
+})
+
+// function stopWatch2()
+// {
+//     console.log("Timer Has Stoped!")
+// }
+
+// function stopWatch()
+// {
+//     const timevalue = userinput.value
+//     // Convert timevalue to milliseconds
+//     const timeInMilliseconds = parseInt(timevalue) * 1000;
+
+//     // Use setTimeout to call stopWatch2 after the specified time
+//     setTimeout(stopWatch2, timeInMilliseconds);
+// }
+
+timeButton.addEventListener("click",stopWatch())
 
 async function getData(lat, long) {
     const promise = await fetch(`http://api.weatherapi.com/v1/current.json?key=e09a42935bcd4e5a80581554240309&q=${lat}, ${long}&aqi=yes`)
