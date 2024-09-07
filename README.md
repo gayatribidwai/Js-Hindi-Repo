@@ -6,7 +6,7 @@ Code repo for javascript series at chai or code youtube channel
 node hello.js
 
 
-# To push code on github (Origin is already added so no need to add again, just push code)
+# To push code on github
 git add .
 git commit -m "Your commit message"
 //git remote add origin "your repo link"
